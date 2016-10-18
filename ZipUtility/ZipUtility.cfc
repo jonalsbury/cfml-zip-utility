@@ -25,9 +25,9 @@ component
 				}
 				arrayAppend( ResponseArray, ByteArrayOutputStream.toByteArray() );
 			}
+			ZipInputStream.closeEntry();
 			ZipEntry = ZipInputStream.getNextEntry();
 		}
-		ZipInputStream.closeEntry();
 		ZipInputStream.close();
 		return ResponseArray;
 	}
